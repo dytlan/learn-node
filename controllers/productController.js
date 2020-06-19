@@ -1,3 +1,4 @@
+//Export Model Product(Class)
 const Product    = require('../models/product');
 
 exports.getProduct = (req,res,next)=>{

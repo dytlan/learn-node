@@ -3,11 +3,13 @@ const path  = require('path');
 
 const rootDir   = require('../helpers/rootDir');
 
+//Specify the path for store local data
 const p = path.join(
     rootDir,
     'data',
     'product.json');
 
+//for reading file and convert the text in the file to javascript object    
 const getProductFile = callback =>{
     fs.readFile(p,(err,fileContent)=>{
         if(err){
@@ -17,6 +19,7 @@ const getProductFile = callback =>{
     });
 }
 
+//Export Class
 module.exports = class Product {
     constructor(title){
         this.title  = title;
